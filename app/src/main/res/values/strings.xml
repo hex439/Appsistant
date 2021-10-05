@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Appsistant</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appTitle">Appsistant</string>
+    <string name="usernameHint">username</string>
+    <string name="passwordHint">password</string>
+    <string name="loginButton_text">Log in</string>
+    <string name="signup_text"><u>New to Appsistant? Sign up</u></string>
+    <string name="forgot_text"><u>Forgot username/password</u></string>
 </resources>
