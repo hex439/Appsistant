@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, CalendarActivity.class);
                 startActivity(intent);
+                System.out.println("test");
             }
         });
     }
