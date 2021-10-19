@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
@@ -23,208 +25,80 @@
         tools:layout_editor_absoluteX="78dp"
         tools:layout_editor_absoluteY="364dp"
         app:layout_constraintTop_toBottomOf="@id/header">
-
-        <LinearLayout
+        
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.Barrier
+            <TableRow
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:barrierDirection="top" />
+                android:layout_height="wrap_content">
 
-            <LinearLayout
-                    android:id="@+id/calendar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:onClick="@activity_calendar">
+                <Button
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Calendar"
-                        android:textSize="24sp"
-                        android:paddingTop="15dp"
-                        android:paddingBottom="15dp"
-                        android:paddingLeft="15dp"
-                        android:layout_weight="0.8"/>
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/ic_menu_today"
+                    android:text="Calendar" />
 
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ic_arrow_forward"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.1"
-                        android:layout_marginRight="15dp"
-                        />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/ic_menu_camera"
+                    android:text="Camera" />
 
-                </LinearLayout>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/ic_menu_recent_history"
+                    android:text="Clock" />
 
-            <LinearLayout
-                android:id="@+id/camera"
+            </TableRow>
+            <TableRow
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Camera"
-                    android:textSize="24sp"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="15dp"
-                    android:paddingLeft="15dp"
-                    android:layout_weight="0.8"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/ic_menu_my_calendar"
+                    android:text="Contacts" />
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_arrow_forward"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.1"
-                    android:layout_marginRight="15dp"
-                    />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/stat_notify_chat"
+                    android:text="Messages" />
 
-            </LinearLayout>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@android:drawable/ic_menu_gallery"
+                    android:text="Gallery" />
 
-            <LinearLayout
-                android:id="@+id/clock"
+            </TableRow>
+            <TableRow
+                android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.8"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="15dp"
-                    android:text="Clock"
-                    android:textSize="24sp" />
+                <Button
+                    android:text="Tutorial"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
 
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="15dp"
-                    android:layout_weight="0.1"
-                    android:src="@drawable/ic_arrow_forward" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/contacts"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.8"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="15dp"
-                    android:text="Contacts"
-                    android:textSize="24sp" />
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="15dp"
-                    android:layout_weight="0.1"
-                    android:src="@drawable/ic_arrow_forward" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.8"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="15dp"
-                    android:text="Email"
-                    android:textSize="24sp" />
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="15dp"
-                    android:layout_weight="0.1"
-                    android:src="@drawable/ic_arrow_forward" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/gallery"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.8"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="15dp"
-                    android:text="Image Gallery"
-                    android:textSize="24sp" />
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="15dp"
-                    android:layout_weight="0.1"
-                    android:src="@drawable/ic_arrow_forward" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/messages"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.8"
-                    android:paddingLeft="15dp"
-                    android:paddingTop="15dp"
-                    android:paddingBottom="15dp"
-                    android:text="Messages"
-                    android:textSize="24sp" />
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="15dp"
-                    android:layout_weight="0.1"
-                    android:src="@drawable/ic_arrow_forward" />
-
-            </LinearLayout>
-        </LinearLayout>
+            </TableRow>
+        </TableLayout>
+        
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
