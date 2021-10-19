@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.AlarmClock;
 import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
@@ -34,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
         contacts.setOnClickListener(v -> {
             Intent intent= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
             startActivityForResult(intent, 1);
+        });
+
+        ImageButton clock = findViewById(R.id.button_clock);
+        clock.setOnClickListener(v -> {
+            Intent intent= new Intent(AlarmClock.ACTION_SHOW_ALARMS);
+            startActivity(intent);
         });
 
 
