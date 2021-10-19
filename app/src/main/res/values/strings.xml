@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">Appsistant</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- Login Strings -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appTitle">Appsistant</string>
+    <string name="usernameHint">username</string>
+    <string name="passwordHint">password</string>
+    <string name="loginButton_text">Log in</string>
+    <string name="signup_text"><u>New to Appsistant? Sign up</u></string>
+    <string name="forgot_text"><u>Forgot username/password</u></string>
+    <string name="inputRecover_text">Enter your email</string>
+    <string name="recoverButton_text">Recover my credentials</string>
+
+
+    <!-- Main Strings -->
+    <string name="applications_title">Applications List</string>
+    <string name="calendar_button">Calendar</string>
+    <string name="camera_button">Camera</string>
+    <string name="clock_button">Clock</string>
+    <string name="contacts_button">Contacts</string>
+    <string name="messages_button">Messages</string>
+    <string name="gallery_button">Gallery</string>
+    <string name="tutorial_button">Tutorial</string>
+
 </resources>
