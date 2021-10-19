@@ -12,7 +12,7 @@
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Applications List"
+        android:text="@string/applications_title"
         android:textStyle="bold"
         android:textSize="26sp"
         android:padding="20dp"
@@ -41,21 +41,21 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:drawableTop="@android:drawable/ic_menu_today"
-                    android:text="Calendar" />
+                    android:text="@string/calendar_button" />
 
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:drawableTop="@android:drawable/ic_menu_camera"
-                    android:text="Camera" />
+                    android:text="@string/camera_button" />
 
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:drawableTop="@android:drawable/ic_menu_recent_history"
-                    android:text="Clock" />
+                    android:text="@string/clock_button" />
 
             </TableRow>
             <TableRow
@@ -68,21 +68,21 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:drawableTop="@android:drawable/ic_menu_my_calendar"
-                    android:text="Contacts" />
+                    android:text="@string/contacts_button" />
 
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:drawableTop="@android:drawable/stat_notify_chat"
-                    android:text="Messages" />
+                    android:text="@string/messages_button" />
 
                 <Button
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:drawableTop="@android:drawable/ic_menu_gallery"
-                    android:text="Gallery" />
+                    android:text="@string/gallery_button" />
 
             </TableRow>
             <TableRow
@@ -91,7 +91,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:text="Tutorial"
+                    android:text="@string/tutorial_button"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"/>
