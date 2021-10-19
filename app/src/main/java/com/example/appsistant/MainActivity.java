@@ -35,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d(TAG, "onClick: Calendar");
 
+                Intent intent = new Intent(Intent.ACTION_EDIT);
+                intent.setType("vnd.android.cursor.item/event");
+                intent.putExtra("title", "Some title");
+                intent.putExtra("description", "Some description");
+                intent.putExtra("beginTime", 0);
+                intent.putExtra("endTime", 0);
+                startActivity(intent);
             }
         });
 
@@ -42,9 +49,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
-                intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivity(intent);
-                System.out.println("test");
             }
         });
     }
