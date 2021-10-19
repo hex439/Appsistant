@@ -37,6 +37,7 @@
 
                 <Button
 
+                    android:id="@+id/calendarBtn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -44,6 +45,7 @@
                     android:text="Calendar" />
 
                 <Button
+                    android:id="@+id/cameraBtn"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
