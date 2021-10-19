@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.CalendarContract;
-import android.provider.MediaStore;
+import android.provider.AlarmClock;
+import android.provider.ContactsContract;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.provider.MediaStore;
+import android.view.View;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +23,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button clock = findViewById(R.id.button_clock);
+        clock.setOnClickListener(v -> {
+            Intent intent= new Intent(AlarmClock.ACTION_SHOW_ALARMS);
+            startActivity(intent);
+        });
+
+        Button contacts = findViewById(R.id.button_contacts);
+        contacts.setOnClickListener(v -> {
+            Intent intent= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
+            startActivityForResult(intent, 1);
+        });
         Button calendar_Btn = findViewById(R.id.calendarBtn);
         Button cameraButton = findViewById(R.id.cameraBtn);
 
