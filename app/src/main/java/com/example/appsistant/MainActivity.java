@@ -2,6 +2,7 @@ package com.example.appsistant;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.provider.ContactsContract;
@@ -46,6 +47,14 @@ public class MainActivity extends AppCompatActivity {
 
         cameraButton.setOnClickListener(v -> {
             Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+            startActivity(intent);
+        });
+
+        Button galleryButton = findViewById(R.id.gallery_btn);
+
+        galleryButton.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
+                    "content://media/internal/images/media"));
             startActivity(intent);
         });
     }
