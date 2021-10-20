@@ -78,6 +78,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:id="@+id/message_btn"
                     android:drawableTop="@android:drawable/stat_notify_chat"
                     android:text="@string/messages_button" />
 
