@@ -6,7 +6,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.provider.ContactsContract;
+import android.provider.Telephony;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
         });
         Button calendar_Btn = findViewById(R.id.calendarBtn);
         Button cameraButton = findViewById(R.id.cameraBtn);
+        Button message_btn = findViewById(R.id.message_btn);
+        message_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSmsApp();
+            }
+        });
 
         calendar_Btn.setOnClickListener(view -> {
             Log.d(TAG, "onClick: Calendar");
@@ -57,5 +66,12 @@ public class MainActivity extends AppCompatActivity {
                     "content://media/internal/images/media"));
             startActivity(intent);
         });
+    }
+    private void openSmsApp() {
+        String packageName = Telephony.Sms.getDefaultSmsPackage(MainActivity.this);
+        Intent launchIntent = getPackageManager().getLaunchIntentForPackage(packageName);
+
+        startActivity(launchIntent);//null pointer check in case package name was not found
+
     }
 }
