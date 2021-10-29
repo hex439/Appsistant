@@ -13,10 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Appsistant">
-        <activity
-            android:name=".ChangedActivity"
-            android:exported="true" />
-        <activity android:name=".SettingsActivity" />
+        <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".ForgotActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".CalendarActivity" />
