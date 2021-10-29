@@ -67,6 +67,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
+    public void settingsClicked(View view) {
+        Button settings = findViewById(R.id.settings_btn);
+        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
     private void openSmsApp() {
         String packageName = Telephony.Sms.getDefaultSmsPackage(MainActivity.this);
         Intent launchIntent = getPackageManager().getLaunchIntentForPackage(packageName);
