@@ -11,6 +11,8 @@
     <string name="inputRecover_text">Enter your email</string>
     <string name="recoverButton_text">Recover my credentials</string>
 
+    <!-- Global Strings -->
+    <string name="settings">Settings</string> <!-- used for title and button -->
 
     <!-- Main Strings -->
     <string name="applications_title">Applications List</string>

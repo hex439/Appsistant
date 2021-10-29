@@ -101,6 +101,13 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"/>
+                <Button
+                    android:id="@+id/settings_btn"
+                    android:text="@string/settings"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:onClick="settingsClicked"/>
 
             </TableRow>
         </TableLayout>
