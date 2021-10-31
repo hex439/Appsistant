@@ -35,7 +35,13 @@ public class MainActivity extends AppCompatActivity {
         Button calendar_Btn = findViewById(R.id.calendarBtn);
         Button cameraButton = findViewById(R.id.cameraBtn);
         Button message_btn = findViewById(R.id.message_btn);
-        message_btn.setOnClickListener(v -> openSmsApp());
+
+        message_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSmsApp();
+            }
+        });
 
         calendar_Btn.setOnClickListener(view -> {
             Log.d(TAG, "onClick: Calendar");
