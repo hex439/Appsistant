@@ -19,6 +19,5 @@ public class SettingsActivity extends AppCompatActivity {
     private void openChangedActivity() {
         Intent intent = new Intent(SettingsActivity.this, ChangedActivity.class);
         startActivity(intent);
-
     }
 }
