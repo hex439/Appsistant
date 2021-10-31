@@ -21,5 +21,17 @@
     <string name="messages_button">Messages</string>
     <string name="gallery_button">Gallery</string>
     <string name="tutorial_button">Tutorial</string>
+    <string name="choose_colour">Choose Colour:</string>
+    <string name="icon_toggle">Icon Toggle</string>
+    <string name="settings">settings</string>
+    <string name="apply">Apply</string>
+    <string name="button">Button</string>
+
+    <string-array name="colour_options">
+        <item>Red</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Purple</item>
+    </string-array>
 
 </resources>

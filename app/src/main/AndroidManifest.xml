@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.appsistant">
 
+    <uses-permission
+        android:name="com.android.alarm.permission.SET_ALARM"
+        android:maxSdkVersion="18" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Appsistant">
-        <activity android:name=".ForgotActivity"></activity>
+        <activity
+            android:name=".ChangedActivity"
+            android:exported="true" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ForgotActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".CalendarActivity" />
         <activity android:name=".MainActivity">

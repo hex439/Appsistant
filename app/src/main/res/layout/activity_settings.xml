@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@id/scrollView"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="78dp"
+        tools:layout_editor_absoluteY="364dp"
+        app:layout_constraintTop_toBottomOf="@id/header">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="@string/icon_toggle"
+                android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Button" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/colourChangerTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_colour"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/colourChanger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48sp"
+                    android:layout_weight="1"
+                    android:entries="@array/colour_options" />
+            </TableRow>
+
+        </TableLayout>
+
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/apply_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="Apply" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
