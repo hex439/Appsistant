@@ -82,18 +82,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(launchIntent);//null pointer check in case package name was not found
 
     }
-
-    public void settingsClicked(View view) {
-        Button settings = findViewById(R.id.settings_btn);
-        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
-        startActivity(intent);
-    }
-
-    private void openSmsApp() {
-        String packageName = Telephony.Sms.getDefaultSmsPackage(MainActivity.this);
-        Intent launchIntent = getPackageManager().getLaunchIntentForPackage(packageName);
-
-        startActivity(launchIntent);//null pointer check in case package name was not found
-
-    }
 }
