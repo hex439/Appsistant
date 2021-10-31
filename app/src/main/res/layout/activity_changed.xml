@@ -28,7 +28,7 @@
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -42,7 +42,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="#FF0303"
-                    android:text="@string/calendar_button" />
+                    android:text="@string/calendar_button"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/cameraBtn"
@@ -50,7 +52,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="#FF0000"
-                    android:text="@string/camera_button" />
+                    android:text="@string/camera_button"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/button_clock"
@@ -58,7 +62,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="#FF0000"
-                    android:text="@string/clock_button" />
+                    android:text="@string/clock_button"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
             </TableRow>
 
@@ -73,7 +79,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="#FF0000"
-                    android:text="@string/contacts_button" />
+                    android:text="@string/contacts_button"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/message_btn"
@@ -81,7 +89,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="#FF0000"
-                    android:text="@string/messages_button" />
+                    android:text="@string/messages_button"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/gallery_btn"
@@ -89,7 +99,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:backgroundTint="#FF0000"
-                    android:text="@string/gallery_button" />
+                    android:text="@string/gallery_button"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
             </TableRow>
 
@@ -104,7 +116,9 @@
                     android:layout_gravity="bottom"
                     android:layout_weight="1"
                     android:backgroundTint="#FF0000"
-                    android:text="@string/tutorial_button" />
+                    android:text="@string/tutorial_button"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
                     android:id="@+id/settings_btn"
@@ -114,7 +128,9 @@
                     android:layout_weight="1"
                     android:backgroundTint="#FF0000"
                     android:onClick="settingsClicked"
-                    android:text="@string/settings" />
+                    android:text="@string/settings"
+                    tools:ignore="TextContrastCheck"
+                    style="?android:attr/buttonBarButtonStyle" />
 
             </TableRow>
 
