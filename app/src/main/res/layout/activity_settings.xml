@@ -36,19 +36,49 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="Icon Toggle"
+                android:text="@string/icon_toggle"
                 android:textSize="20sp" />
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/icon_chip"
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Remove Icon" />
+
+            </TableRow>
+
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </TableRow>
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/colourChangerTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_colour"
+                    android:textAlignment="center"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/colourChanger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48sp"
+                    android:layout_weight="1"
+                    android:entries="@array/colour_options" />
+            </TableRow>
 
         </TableLayout>
 
 
 
     </ScrollView>
+  
+    <Button
+        android:id="@+id/apply_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="Apply" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

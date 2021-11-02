@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intent, 1);
         });
 
+    
+
+
         message_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
