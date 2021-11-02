@@ -20,6 +20,7 @@
         <activity android:name=".ForgotActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".CalendarActivity" />
+        <activity android:name=".ContactsActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
