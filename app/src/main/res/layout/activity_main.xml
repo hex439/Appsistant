@@ -43,6 +43,7 @@
                     android:layout_weight="1"
                     android:drawableTop="@android:drawable/ic_menu_today"
                     android:text="@string/calendar_button"
+                    android:onClick="calendarClicked"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <Button

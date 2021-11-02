@@ -47,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intent, 1);
         });
 
-    
-
 
         message_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,17 +55,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        calendar_Btn.setOnClickListener(view -> {
-            Log.d(TAG, "onClick: Calendar");
-
-            Intent intent = new Intent(Intent.ACTION_EDIT);
-            intent.setType("vnd.android.cursor.item/event");
-            intent.putExtra("title", "Some title");
-            intent.putExtra("description", "Some description");
-            intent.putExtra("beginTime", 0);
-            intent.putExtra("endTime", 0);
-            startActivity(intent);
-        });
 
         cameraButton.setOnClickListener(v -> {
             Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
@@ -80,8 +67,6 @@ public class MainActivity extends AppCompatActivity {
                     "content://media/internal/images/media"));
             startActivity(intent);
         });
-
-
 
 
         increaseFontButton.setOnClickListener(view -> {
@@ -117,14 +102,23 @@ public class MainActivity extends AppCompatActivity {
             settings.setTextSize(fontSize);
         });
 
-        clock.setOnClickListener(v -> {
+        tutorialButton.setOnClickListener(v -> {
             Log.d(TAG, "onClick: tutorial");
 
         });
     }
 
     public void settingsClicked(View view) {
+        Log.d(TAG, "onClick: Settings Button");
+
         Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    public void calendarClicked(View view) {
+        Log.d(TAG, "onClick: Calendar Button");
+
+        Intent intent = new Intent(MainActivity.this, CalendarActivity.class);
         startActivity(intent);
     }
 
