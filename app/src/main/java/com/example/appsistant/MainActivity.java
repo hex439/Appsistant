@@ -9,32 +9,44 @@ import android.provider.ContactsContract;
 import android.provider.Telephony;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebSettings;
 import android.widget.Button;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
+    private int fontSize = 24;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Button clock = findViewById(R.id.button_clock);
+        Button calendar_Btn = findViewById(R.id.calendarBtn);
+        Button cameraButton = findViewById(R.id.cameraBtn);
+        Button message_btn = findViewById(R.id.message_btn);
+        Button contacts = findViewById(R.id.button_contacts);
+        Button galleryButton = findViewById(R.id.gallery_btn);
+        Button increaseFontButton = findViewById(R.id.increase_button);
+        Button decreaseFontButton = findViewById(R.id.decrease_button);
+        Button settings = findViewById(R.id.settings_btn);
+        Button tutorialButton = findViewById(R.id.tutorial_button);
+
         clock.setOnClickListener(v -> {
             Intent intent= new Intent(AlarmClock.ACTION_SHOW_ALARMS);
             startActivity(intent);
         });
 
-        Button contacts = findViewById(R.id.button_contacts);
         contacts.setOnClickListener(v -> {
             Intent intent= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
             startActivityForResult(intent, 1);
         });
-        Button calendar_Btn = findViewById(R.id.calendarBtn);
-        Button cameraButton = findViewById(R.id.cameraBtn);
-        Button message_btn = findViewById(R.id.message_btn);
+
         message_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,20 +71,60 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        Button galleryButton = findViewById(R.id.gallery_btn);
 
         galleryButton.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(
                     "content://media/internal/images/media"));
             startActivity(intent);
         });
+
+
+
+
+        increaseFontButton.setOnClickListener(view -> {
+            Log.d(TAG, "onClick: increase font size");
+            fontSize ++;
+
+            calendar_Btn.setTextSize(fontSize);
+            cameraButton.setTextSize(fontSize);
+            clock.setTextSize(fontSize);
+            contacts.setTextSize(fontSize);
+            message_btn.setTextSize(fontSize);
+            galleryButton.setTextSize(fontSize);
+            decreaseFontButton.setTextSize(fontSize);
+            increaseFontButton.setTextSize(fontSize);
+            tutorialButton.setTextSize(fontSize);
+            settings.setTextSize(fontSize);
+
+        });
+
+        decreaseFontButton.setOnClickListener(view -> {
+            Log.d(TAG, "onClick: decrease font size");
+            fontSize --;
+
+            calendar_Btn.setTextSize(fontSize);
+            cameraButton.setTextSize(fontSize);
+            clock.setTextSize(fontSize);
+            contacts.setTextSize(fontSize);
+            message_btn.setTextSize(fontSize);
+            galleryButton.setTextSize(fontSize);
+            decreaseFontButton.setTextSize(fontSize);
+            increaseFontButton.setTextSize(fontSize);
+            tutorialButton.setTextSize(fontSize);
+            settings.setTextSize(fontSize);
+        });
+
+        clock.setOnClickListener(v -> {
+            Log.d(TAG, "onClick: tutorial");
+
+        });
     }
 
     public void settingsClicked(View view) {
-        Button settings = findViewById(R.id.settings_btn);
         Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
         startActivity(intent);
     }
+
 
     private void openSmsApp() {
         String packageName = Telephony.Sms.getDefaultSmsPackage(MainActivity.this);
@@ -81,4 +133,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(launchIntent);//null pointer check in case package name was not found
 
     }
+
 }
