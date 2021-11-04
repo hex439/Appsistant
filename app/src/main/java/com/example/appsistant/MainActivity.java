@@ -9,10 +9,7 @@ import android.provider.ContactsContract;
 import android.provider.Telephony;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebSettings;
 import android.widget.Button;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,18 +39,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-//        contacts.setOnClickListener(v -> {
-//            Intent intent= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
-//            startActivityForResult(intent, 1);
-//        });
-
-
-        message_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSmsApp();
-            }
+        contacts.setOnClickListener(v -> {
+            Intent intent= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
+            startActivityForResult(intent, 1);
         });
+
+
+        message_btn.setOnClickListener(v -> openSmsApp());
 
 
         cameraButton.setOnClickListener(v -> {
@@ -102,10 +94,7 @@ public class MainActivity extends AppCompatActivity {
             settings.setTextSize(fontSize);
         });
 
-        tutorialButton.setOnClickListener(v -> {
-            Log.d(TAG, "onClick: tutorial");
-
-        });
+        tutorialButton.setOnClickListener(v -> Log.d(TAG, "onClick: tutorial"));
     }
 
     public void settingsClicked(View view) {
@@ -122,13 +111,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void contactsClicked(View view) {
+    /*public void contactsClicked(View view) {
         Log.d(TAG, "onClick: Contact Button");
 
         Intent intent = new Intent(MainActivity.this, ContactsActivity.class);
         startActivity(intent);
-    }
-
+    }*/
 
     private void openSmsApp() {
         String packageName = Telephony.Sms.getDefaultSmsPackage(MainActivity.this);

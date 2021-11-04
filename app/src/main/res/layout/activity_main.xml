@@ -40,11 +40,13 @@
             android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/search_btn"
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@android:color/transparent"
                 android:tint="@color/grey_60"
-                app:srcCompat="@drawable/ic_search" />
+                app:srcCompat="@drawable/ic_search"
+                android:contentDescription="@string/search_click_button" />
 
             <EditText
                 android:id="@+id/et_search"
@@ -52,10 +54,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:hint="Search product"
+                android:hint="@string/search_product_string"
                 android:imeOptions="actionSearch"
                 android:maxLines="1"
-                android:singleLine="true">
+                android:singleLine="true"
+                android:autofillHints=""
+                android:inputType="text">
 
                 <requestFocus />
 
@@ -68,7 +72,9 @@
                 android:background="@android:color/transparent"
                 android:clickable="true"
                 android:tint="@color/grey_60"
-                app:srcCompat="@drawable/ic_close" />
+                app:srcCompat="@drawable/ic_close"
+                android:focusable="true"
+                android:contentDescription="@string/clear_button" />
 
         </LinearLayout>
 
@@ -136,7 +142,8 @@
                     android:text="@string/contacts_button"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_margin="10dp"
-                    android:onClick="contactsClicked"/>
+                    android:onClick="contactsClicked"
+                    tools:ignore="OnClick" />
 
                 <Button
                     android:layout_width="0dp"
@@ -167,18 +174,21 @@
 
                 <Button
                     android:id="@+id/increase_button"
-                    android:text="Increase Font Size"
+                    android:text="@string/increase_font_size"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"/>
+                    android:layout_margin="5dp"
+                    style="?android:attr/buttonBarButtonStyle" />
+
                 <Button
                     android:id="@+id/decrease_button"
-                    android:text="Decrease Font Size"
+                    android:text="@string/decrease_font_size"
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"/>
+                    android:layout_margin="5dp"
+                    style="?android:attr/buttonBarButtonStyle" />
 
             </TableRow>
 
