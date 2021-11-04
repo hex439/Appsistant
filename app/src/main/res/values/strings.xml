@@ -32,6 +32,8 @@
     <string name="clear_button">Clear Button</string>
     <string name="increase_font_size">Increase Font Size</string>
     <string name="decrease_font_size">Decrease Font Size</string>
+    <string name="back_arrow_button_image">Back Arrow Button</string>
+    <string name="camera_options">Camera Options</string>
 
     <string-array name="colour_options">
         <item>Red</item>
