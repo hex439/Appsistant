@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/back_arrow_button_image"
+                android:paddingLeft="20sp"
+                android:paddingTop="10sp"
+                android:paddingRight="20sp"
+                android:paddingBottom="10sp"
+                android:src="@drawable/ic_arrow_back"
+                android:textAlignment="textStart"
+                tools:ignore="RtlCompat,RedundantDescriptionCheck" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/camera_options"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/TakePhotoTV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Take Photo"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/takePhotoBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|end"
+                android:layout_weight="1"
+                android:src="@drawable/ic_arrow_forward" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/TakeVideoTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Take Video"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/takeVideoBtn"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|end"
+                android:layout_weight="1"
+                android:src="@drawable/ic_arrow_forward" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

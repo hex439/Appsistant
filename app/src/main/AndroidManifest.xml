@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Appsistant">
         <activity
+            android:name=".CameraActivity"
+            android:exported="true" />
+        <activity
             android:name=".ChangedActivity"
             android:exported="true" />
         <activity android:name=".SettingsActivity" />
