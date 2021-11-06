@@ -204,7 +204,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     style="?android:attr/buttonBarButtonStyle"
-                    android:layout_margin="5dp"/>
+                    android:layout_margin="5dp"
+                    android:onClick="tutorialClicked"/>
 
                 <Button
                     android:id="@+id/settings_btn"
@@ -217,6 +218,7 @@
                     android:layout_margin="5dp"/>
 
             </TableRow>
+
         </TableLayout>
 
     </ScrollView>

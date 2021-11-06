@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.AlarmClock;
-import android.provider.ContactsContract;
 import android.provider.Telephony;
 import android.util.Log;
 import android.view.View;
@@ -94,8 +93,16 @@ public class MainActivity extends AppCompatActivity {
             settings.setTextSize(fontSize);
         });
 
-        tutorialButton.setOnClickListener(v -> Log.d(TAG, "onClick: tutorial"));
+
     }
+
+    public void tutorialClicked(View view) {
+        Log.d(TAG, "onClick: Tutorial Button");
+
+        Intent intent = new Intent(MainActivity.this, TutorialActivity.class);
+        startActivity(intent);
+    }
+
 
     public void settingsClicked(View view) {
         Log.d(TAG, "onClick: Settings Button");
