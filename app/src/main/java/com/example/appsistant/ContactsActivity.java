@@ -19,6 +19,8 @@ public class ContactsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
+        Log.d(TAG, "inflate contacts activity");
+
         ImageButton viewContact = findViewById(R.id.view_contacts);
         ImageButton callContact = findViewById(R.id.call_contact);
         ImageButton addContact = findViewById(R.id.add_contact);

@@ -142,8 +142,7 @@
                     android:text="@string/contacts_button"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_margin="10dp"
-                    android:onClick="contactsClicked"
-                    tools:ignore="OnClick" />
+                    android:onClick="contactsClicked" />
 
                 <Button
                     android:layout_width="0dp"

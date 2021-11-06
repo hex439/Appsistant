@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        contacts.setOnClickListener(v -> {
-            Intent intent= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
-            startActivityForResult(intent, 1);
-        });
+//        contacts.setOnClickListener(v -> {
+//            Intent intent= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
+//            startActivityForResult(intent, 1);
+//        });
 
 
         message_btn.setOnClickListener(v -> openSmsApp());
@@ -111,12 +111,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*public void contactsClicked(View view) {
+    public void contactsClicked(View view) {
         Log.d(TAG, "onClick: Contact Button");
 
         Intent intent = new Intent(MainActivity.this, ContactsActivity.class);
         startActivity(intent);
-    }*/
+    }
 
     private void openSmsApp() {
         String packageName = Telephony.Sms.getDefaultSmsPackage(MainActivity.this);
