@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.AlarmClock;
-import android.provider.ContactsContract;
 import android.provider.Telephony;
 import android.util.Log;
 import android.view.View;
@@ -39,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        contacts.setOnClickListener(v -> {
-            Intent intent= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
-            startActivityForResult(intent, 1);
-        });
+//        contacts.setOnClickListener(v -> {
+//            Intent intent= new Intent(Intent.ACTION_PICK,  ContactsContract.Contacts.CONTENT_URI);
+//            startActivityForResult(intent, 1);
+//        });
 
 
         message_btn.setOnClickListener(v -> openSmsApp());
@@ -94,8 +93,16 @@ public class MainActivity extends AppCompatActivity {
             settings.setTextSize(fontSize);
         });
 
-        tutorialButton.setOnClickListener(v -> Log.d(TAG, "onClick: tutorial"));
+
     }
+
+    public void tutorialClicked(View view) {
+        Log.d(TAG, "onClick: Tutorial Button");
+
+        Intent intent = new Intent(MainActivity.this, TutorialActivity.class);
+        startActivity(intent);
+    }
+
 
     public void settingsClicked(View view) {
         Log.d(TAG, "onClick: Settings Button");
@@ -111,12 +118,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*public void contactsClicked(View view) {
+    public void contactsClicked(View view) {
         Log.d(TAG, "onClick: Contact Button");
 
         Intent intent = new Intent(MainActivity.this, ContactsActivity.class);
         startActivity(intent);
-    }*/
+    }
 
     private void openSmsApp() {
         String packageName = Telephony.Sms.getDefaultSmsPackage(MainActivity.this);
